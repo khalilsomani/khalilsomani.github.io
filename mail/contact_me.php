@@ -12,8 +12,8 @@ if(empty($_POST['name'])  		||
 	return false;
    }
    
-
-  
+<!--
+ 
 $name = $_POST['name'];
 $email_address = $_POST['email'];
 $phone = $_POST['phone'];
@@ -47,7 +47,8 @@ if (PEAR::isError($mail)) {
 } else {
   echo("<p>Message successfully sent!</p>");
 }
-	
+
+	-->
 	
 // Create the email and send the message
 //$to = 'khalilsomani@gmail.net'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
