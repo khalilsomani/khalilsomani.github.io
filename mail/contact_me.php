@@ -10,7 +10,7 @@ if(empty($_POST['name'])  		||
 	return false;
    }
    
-require_once "Mail.php";  
+
   
 $name = $_POST['name'];
 $email_address = $_POST['email'];
@@ -21,25 +21,43 @@ $message = $_POST['message'];
 $from = '<noreply@khalilsomani.com>'; //change this to your email address
 $to = '<khalilsomani@gmail.com>'; // change to address
 $subject = "Website Contact Form:  $name"; // subject of mail
-$body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
+$message = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
 
-$headers = array(
-    'From' => $from,
-    'To' => $to,
-    'Subject' => $subject
-);
+    require_once('class.phpmailer.php');
+    function sendmail($to,$subject,$message,$name)
+    {
+                  $mail             = new PHPMailer();
+                  $body             = $message
+                  $mail->IsSMTP();
+                  $mail->SMTPAuth   = true;
+                  $mail->Host       = "smtp.gmail.com";
+                  $mail->Port       = 465;
+                  $mail->Username   = "khalilsomani@gmail.com";
+                  $mail->Password   = "dontstopmenow";
+                  $mail->SMTPSecure = 'ssl';
+                  $mail->SetFrom('youraccount@gmail.com', 'Your name');
+                  $mail->AddReplyTo("youraccount@gmail.com","Your name");
+                  $mail->Subject    = $subject;
+                  $mail->AltBody    = "Any message.";
+                  $mail->MsgHTML($body);
+                  $address = $to;
+                  $mail->AddAddress($address, $name);
+                  if(!$mail->Send()) {
+                      return 0;
+                  } else {
+                        return 1;
+                 }
+    }
 
-$smtp = Mail::factory('smtp', array(
-        'host' => 'ssl://smtp.gmail.com',
-        'port' => '465',
-        'auth' => true,
-        'username' => 'khalilsomani@gmail.com', //your gmail account
-        'password' => 'lyvdugllndrbiquf' // your password
-    ));
 
-// Send the mail
-$mail = $smtp->send($to, $headers, $body);
 
+      $mailsend =   sendmail($to,$subject,$message,$name);
+      if($mailsend==1){
+        echo '<h2>email sent.</h2>';
+      }
+      else{
+        echo '<h2>There are some issue.</h2>';
+      }
 	
 	
 	
