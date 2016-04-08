@@ -11,9 +11,30 @@ if(empty($_POST['name'])  		||
 	echo "No arguments Provided!";
 	return false;
    }
-   
-<!--
- 
+
+$name = $_POST['name'];
+$email_address = $_POST['email'];
+$phone = $_POST['phone'];
+$message = $_POST['message'];
+
+
+$from = '<noreply@khalilsomani.com>'; //change this to your email address
+$to = '<khalilsomani@gmail.com>'; // change to address
+$subject = "Website Contact Form:  $name"; // subject of mail
+$body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
+
+
+// If there are no errors, send the email
+if (!$errName && !$errEmail && !$errMessage && !$errHuman) {
+	if (mail ($to, $subject, $body, $from)) {
+		$result='<div class="alert alert-success">Thank You! I will be in touch</div>';
+	} else {
+		$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
+	}
+}
+	}
+
+/* 
 $name = $_POST['name'];
 $email_address = $_POST['email'];
 $phone = $_POST['phone'];
@@ -48,7 +69,8 @@ if (PEAR::isError($mail)) {
   echo("<p>Message successfully sent!</p>");
 }
 
-	-->
+*/
+	
 	
 // Create the email and send the message
 //$to = 'khalilsomani@gmail.net'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
