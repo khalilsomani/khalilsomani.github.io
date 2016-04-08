@@ -28,7 +28,7 @@ $message = "You have received a new message from your website contact form.\n\n"
 $host = "ssl://smtp.gmail.com";
 $port = "465";
 $username = "noreply@khalilsomani.com";
-$password = "dontstopmenow";
+$password = "lyvdugllndrbiquf";
 
 $headers = array ('From' => $from,
   'To' => $to,
