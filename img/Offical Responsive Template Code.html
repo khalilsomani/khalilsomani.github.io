@@ -1,0 +1,287 @@
+<style>
+​
+	@media screen and (max-width: 768px){
+		/*prevents extra spacing between right, center, or left footer buttons*/
+		.ds-survey .ds-header-footer .ds-nav-buttons .ds-buttons{
+			margin: 0px 0px;
+		}
+​
+		/*response section of questions*/
+		.ds-survey .ds-collection-items .ds-item .ds-question .ds-control {
+			margin-top: 0px!important;
+			margin-left: 0px!important;
+		}
+​
+		.ds-survey .ds-collection-items .ds-item .ds-question .ds-prompt {
+			margin-top: 10px;
+		}
+​
+		.ds-prompt .ds-templated-collection-instructions {
+		    font-size: 18px!important;
+		}
+​
+		/*question table font size 
+		.ds-survey .ds-collection-items .ds-item .ds-question .ds-table .ds-prompt {
+			font-size: 16px!important;
+		}
+​
+		.ds-survey .ds-collection-items .ds-item .ds-question.ds-templated-collection .ds-table .ds-tc-headers .ds-tc-prompt-header {
+		    font-size: 23px!important;
+		    color: #004556!important;
+		}*/
+	}
+	
+	@media screen and (max-width: 992px){
+		/*makes green filling of selected linkert scale item fit its container box better*/
+		.ds-survey .ds-collection-items .ds-item .ds-question .ds-control .ds-scale.ds-likert-grid .ds-scale-item.ds-selected {
+			border-radius: 0px;
+		}
+​
+		/*response section of questions*/
+		.ds-survey .ds-collection-items .ds-item .ds-question .ds-control {
+			margin-top: 0px!important;
+			margin-left: 0px!important;
+		}
+	}
+	
+	/* makes text areas with specified widths greater than the size of the screen fit the screen */
+	textarea{
+		max-width: 100%;
+	}
+	
+	/* adds spacing below header */
+	.ds-header{
+		margin-bottom: 20px;
+	}
+	
+	/* set position of the footer to absolute so that it can be positioned at the bottom of the page */
+	.ds-header-footer.ng-isolate-scope.ds-footer{
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		margin-top: 25px;
+	}
+​
+	/*response section of questions*/
+	.ds-survey .ds-collection-items .ds-item .ds-question .ds-control {
+		margin-top: 15px;
+		margin-left: 28px;
+	}
+​
+	/*response option text*/
+	.ds-survey .ds-collection-items .ds-question .ds-control .ds-scale .ds-scale-item .ds-scale-label .ds-text p {
+		margin: 0;
+		padding: 0;
+		font-size: 18px;
+		/*color:#004556;*/
+	}
+​
+	/* prompt adjustments */
+	.ds-survey .ds-collection-items .ds-item .ds-question .ds-prompt {
+		font-size: 23px;
+		font-style: normal;
+		font-weight: normal;
+		text-decoration: none;
+		font-variant: normal;
+		/*color: #004556;*/
+	}
+​
+	/*making response options closer to prompts*/
+	.ds-control {
+		margin-top: 0px!important;
+	}
+​
+	/* prompt "bullet point" adjustment/color */
+	.fa {
+		display: inline-block;
+		font: normal normal normal 14px/1 FontAwesome;
+		font-size: inherit;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		color:#33B2CC;
+	}
+	/*survey title at the top left text and alignment adjustment*/
+	.ds-header-content .ds-left {
+		text-align: left;
+		font-size: 45px;
+		height: 40px;
+	}
+​
+	.arrowRight {
+		width: 0; 
+		height: 0; 
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+		border-left: 10px solid #004556;
+		overflow: hidden;
+		float: left;
+		margin-right: 10px;
+		margin-top: 5px;
+	}
+​
+	.arrowDown {
+		width: 0; 
+		height: 0; 
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-top: 10px solid #004556;
+		overflow: hidden;
+		float: left;
+		margin-right: 10px;
+		margin-top: 10px;
+	}
+​
+	.accordionPrompt{
+		border: 2px solid black;
+		border-radius: 5px;
+		padding: 10px;
+		background: #33B2CC;
+		cursor: pointer;
+		word-wrap: break-word;
+		margin-top: -10px;
+		margin-bottom: -10px;
+	}
+​
+	.ds-survey .ds-collection-items .ds-item .ds-question.ds-templated-collection .ds-table .ds-tc-headers .ds-tc-prompt-header {
+	    font-size: 18px!important;
+	    /*color: #004556!important;*/
+	}
+​
+	.ds-prompt{
+		font-size: 23px!important;
+	}
+</style>
+​
+<script>
+	function footerToBottomOfPage(){
+		document.getElementsByClassName("ds-header-footer ng-isolate-scope ds-footer")[0].style.bottom = "";
+​
+		if(document.getElementsByClassName("ds-header-footer ng-isolate-scope ds-footer")[0].offsetTop 
+			< window.innerHeight - document.getElementsByClassName("ds-header-footer ng-isolate-scope ds-footer")[0].offsetHeight 
+			&& document.getElementsByClassName("ds-title").length == 0){
+			document.getElementsByClassName("ds-header-footer ng-isolate-scope ds-footer")[0].style.bottom = 0;
+	}
+	
+	/* this is so that if the bottom of the footer gets set to 0 and then someone presses f12,
+	the footer will not follow on top of the console if there are questions below it*/
+	$(document).off("keydown", setTimeout(footerToBottomOfPage, 100));
+}
+​
+function hideQuestions(){
+	for(var i = 0; i < $('.ds-control').length; i++){
+		if((!$('.ds-prompt.ng-isolate-scope')[i].children[2] || !$('.ds-prompt.ng-isolate-scope')[i].children[2].children[0] || !$('.ds-prompt.ng-isolate-scope')[i].children[2].children[0].classList.contains("accordians")) && (!$('.ds-prompt.ng-isolate-scope')[i].children[3] || !$('.ds-prompt.ng-isolate-scope')[i].children[3].children[0] || !$('.ds-prompt.ng-isolate-scope')[i].children[3].children[0].classList.contains("accordians"))) {
+				continue;
+			}
+		$('.ds-control')[i].hidden = true;
+	}
+}
+​
+/*handles clicking on a prompt when in mobile mode*/
+function toggleControl(){
+	for(var i = 0; i < $('.ds-prompt.ng-isolate-scope').length; i++){
+		if((!$('.ds-prompt.ng-isolate-scope')[i].children[2] || !$('.ds-prompt.ng-isolate-scope')[i].children[2].children[0] || !$('.ds-prompt.ng-isolate-scope')[i].children[2].children[0].classList.contains("accordians")) && (!$('.ds-prompt.ng-isolate-scope')[i].children[3] || !$('.ds-prompt.ng-isolate-scope')[i].children[3].children[0] || !$('.ds-prompt.ng-isolate-scope')[i].children[3].children[0].classList.contains("accordians"))) {
+				continue;
+			}
+		if($('.ds-prompt.ng-isolate-scope')[i].parentNode.classList.contains("ds-error")){
+			if($('.ds-control')[i].hidden == true){
+				$('.ds-control')[i].hidden = false;
+				$('.arrow')[i].className = "arrowDown arrow";
+			}else{
+				$('.ds-control')[i].hidden = true;
+				$('.arrow')[i].className = "arrowRight arrow";
+			}
+			$('body').animate({scrollTop: $(this).position().top});
+		}else{
+			$('.ds-control')[i].hidden = true;
+			$('.arrow')[i].className = "arrowRight arrow";
+		}
+	}
+}
+​
+function toggleMobileFormat(){
+	if(window.innerWidth < 768){
+		/*remove bullet points from prompts*/
+		for(var i = 0; i < $(".ds-question-num.fa.fa-circle.ng-scope").length; i++){
+			if((!$('.ds-prompt.ng-isolate-scope')[i].children[2] || !$('.ds-prompt.ng-isolate-scope')[i].children[2].children[0] || !$('.ds-prompt.ng-isolate-scope')[i].children[2].children[0].classList.contains("accordians")) && (!$('.ds-prompt.ng-isolate-scope')[i].children[3] || !$('.ds-prompt.ng-isolate-scope')[i].children[3].children[0] || !$('.ds-prompt.ng-isolate-scope')[i].children[3].children[0].classList.contains("accordians"))) {
+				continue;
+			}
+			$(".ds-question-num.fa.fa-circle.ng-scope")[i].style.display = "none";
+		}
+​
+		/*add event handler to prompts, add style to prompts, hide ds-controls, add arrows to prompts*/
+		for(var i = 0; i < $('.ds-prompt.ng-isolate-scope').length; i++){
+​
+			if(!$('.ds-prompt.ng-isolate-scope')[i].children[0].classList.contains("arrow")){
+				newDiv = document.createElement("div");
+				if(!(!$('.ds-prompt.ng-isolate-scope')[i].children[2] || !$('.ds-prompt.ng-isolate-scope')[i].children[2].children[0] || !$('.ds-prompt.ng-isolate-scope')[i].children[2].children[0].classList.contains("accordians")) && (!$('.ds-prompt.ng-isolate-scope')[i].children[3] || !$('.ds-prompt.ng-isolate-scope')[i].children[3].children[0] || !$('.ds-prompt.ng-isolate-scope')[i].children[3].children[0].classList.contains("accordians"))) {
+					newDiv.className = "arrowRight";
+				}
+				$(newDiv).addClass("arrow");
+				$('.ds-prompt.ng-isolate-scope')[i].insertBefore(newDiv, $('.ds-prompt.ng-isolate-scope')[i].firstChild);
+			}
+​
+			if((!$('.ds-prompt.ng-isolate-scope')[i].children[2] || !$('.ds-prompt.ng-isolate-scope')[i].children[2].children[0] || !$('.ds-prompt.ng-isolate-scope')[i].children[2].children[0].classList.contains("accordians")) && (!$('.ds-prompt.ng-isolate-scope')[i].children[3] || !$('.ds-prompt.ng-isolate-scope')[i].children[3].children[0] || !$('.ds-prompt.ng-isolate-scope')[i].children[3].children[0].classList.contains("accordians"))) {
+				continue;
+			}
+			$('.ds-prompt.ng-isolate-scope')[i].addEventListener("click", toggleControl, false);
+			$('.ds-prompt.ng-isolate-scope')[i].classList.add("accordionPrompt");
+			$('.ds-prompt.ng-isolate-scope')[i].parentNode.style.padding = "0px";
+			$('.ds-prompt.ng-isolate-scope')[i].style.marginTop = "10px";
+			
+			if($('.arrow')[i].className == "arrowRight arrow"){
+				$('.ds-control')[i].hidden = true;
+			}
+			if($('.ds-prompt.ng-isolate-scope')[i].offsetHeight < 50){
+				$('.ds-prompt.ng-isolate-scope')[i].style.paddingBottom = "40px";
+			}
+		}
+	}else{
+		/*undo everyhting from above*/
+		for(var i = 0; i < $(".ds-question-num.fa.fa-circle.ng-scope").length; i++){
+			if((!$('.ds-prompt.ng-isolate-scope')[i].children[2] || !$('.ds-prompt.ng-isolate-scope')[i].children[2].children[0] || !$('.ds-prompt.ng-isolate-scope')[i].children[2].children[0].classList.contains("accordians")) && (!$('.ds-prompt.ng-isolate-scope')[i].children[3] || !$('.ds-prompt.ng-isolate-scope')[i].children[3].children[0] || !$('.ds-prompt.ng-isolate-scope')[i].children[3].children[0].classList.contains("accordians"))) {
+				continue;
+			}
+			$(".ds-question-num.fa.fa-circle.ng-scope")[i].style.display = "";
+		}
+		for(var i = 0; i < $('.ds-control').length; i++){
+			if((!$('.ds-prompt.ng-isolate-scope')[i].children[2] || !$('.ds-prompt.ng-isolate-scope')[i].children[2].children[0] || !$('.ds-prompt.ng-isolate-scope')[i].children[2].children[0].classList.contains("accordians")) && (!$('.ds-prompt.ng-isolate-scope')[i].children[3] || !$('.ds-prompt.ng-isolate-scope')[i].children[3].children[0] || !$('.ds-prompt.ng-isolate-scope')[i].children[3].children[0].classList.contains("accordians"))) {
+				continue;
+			}
+			$('.ds-prompt.ng-isolate-scope')[i].removeEventListener("click", toggleControl, false);
+			$('.ds-control')[i].hidden = false;
+			$('.ds-prompt.ng-isolate-scope')[i].parentNode.style.padding = "";
+			$('.ds-prompt.ng-isolate-scope')[i].style.marginTop = "";
+			$('.ds-prompt.ng-isolate-scope')[i].classList.remove("accordionPrompt");
+		}
+		for(var i = 0; i < $('.ds-prompt.ng-isolate-scope').length; i++){
+			if((!$('.ds-prompt.ng-isolate-scope')[i].children[2] || !$('.ds-prompt.ng-isolate-scope')[i].children[2].children[0] || !$('.ds-prompt.ng-isolate-scope')[i].children[2].children[0].classList.contains("accordians")) && (!$('.ds-prompt.ng-isolate-scope')[i].children[3] || !$('.ds-prompt.ng-isolate-scope')[i].children[3].children[0] || !$('.ds-prompt.ng-isolate-scope')[i].children[3].children[0].classList.contains("accordians"))) {
+				continue;
+			}
+			if($('.ds-prompt.ng-isolate-scope')[i].style.paddingBottom == "40px"){
+				$('.ds-prompt.ng-isolate-scope')[i].style.paddingBottom = "";
+			}
+		}
+		$('.arrow').remove();
+	}
+}
+​
+function start(){
+	console.log("on start");
+	hideQuestions();
+	footerToBottomOfPage();
+	setTimeout(toggleMobileFormat, 400);
+}
+​
+$(document).ready(start);
+$(window).resize(toggleMobileFormat);
+​
+/* EDIT MADE IN SURVEY->STYLES-------------------------------------------------------------------------
+​
+	//eliminates spacing added by text elements that arent meant to display anything
+	2. survey->collection->item->first and last->TopPadding/BottomPadding: Default
+	3. tablet->collection->item_first and last->TopPadding/BottomPadding: Default
+	4. survey->->collection->question->TopMargin and BottomMargin: 25px
+​
+*/ 
+​
+</script>
