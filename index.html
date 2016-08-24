@@ -582,10 +582,10 @@
                             <hr class="star-primary">
                             <a href="https://github.com/khalilsomani/khalilsomani.github.io/blob/master/img/Offical%20Responsive%20Template%20Code.html"><img src="khalilsomani.github.io/img/web-trifecta_html5_css3_js-strict.png" class="img-responsive img-centered" alt="" style="height: 400px; width: 710px"></a>
                             <h3>About the Client: Datstat</h3>
-                            <p>During my time as a technical specialist intern at Datstat, a population health company that produces surveys among other patient interaction platforms, I was asked to create a custom survey template to replace the newest template. Desipite it being the most up to date survey version, there were many flaws in design and execution that the company felt a fellow intern and I could impove with custom Javascript, HTML, and CSS.</p>
-                            <p>The template we created is also special in that it is completely mobile-friendy in addition to being desktop-friendly. Below I will describe what changes and additions we implimented, as well as the annotated code that we wrote. Our survey template is slowly becoming the current most up-to-date version of Datstat Illume software and has already been integrated into the surveys of major clients!</p>
+                            <p> Datstat is a population health company that produces surveys among other patient interaction platforms. During my time as a technical specialist intern at Datstat, I was asked to create a custom survey template to replace the current one. Desipite it being the most up to date survey version, it contained many flaws in design and execution that the company felt a fellow intern and I could impove with custom Javascript, HTML, and CSS.</p>
+                            <p>The template we created is completely mobile-friendy in addition to being desktop-friendly. Below I will describe what changes and additions we implimented, and give a link to our code. Our survey template has already been integrated into the surveys of major clients and will soon be the default for Datstat Illume software.</p>
                             <h3>Major Adjustments</h3>
-                            <p>Here are some of the major changes we made to the old survey template. We created a way to dispaly survey loops, which were repeated sections of surveys that clients can ask to occur under specific circumstances. We used Javascript to make it so that the footer does not float up with the last question, instead always staying at the bottom of every page. We also did custom formatting on survey prompts, response options, and titles for a more fluid and appealing interaction. The first picture is an example from the old template, the second is from the new template we created.</p>
+                            <p>Here are some of the major changes we made to the old survey template. We created a way to display survey loops in a table, which represents repeated sections of surveys that clients can ask for occur under specific circumstances. We also used Javascript to make it so that the footer does not float up with the last question, instead always staying at the bottom of every page, even when programmers press F12 to inspect page elements. We also used custom formatting on survey prompts, response options, and titles for more fluid and appealing interaction. The first picture below is an example from the old template, the second is from the new template we created.</p>
                             <figure style="display:inline-block">
                             <img src="khalilsomani.github.io/img/Screenshot1_new.PNG" class="img-responsive img-centered" style="border:2px solid red" alt="">
                             </figure>
@@ -593,15 +593,15 @@
                             <img src="khalilsomani.github.io/img/Screenshot1_real.PNG" class="img-responsive img-centered" style="border:2px solid red" alt="">
                             </figure>
                             <h3>Mobile Accordian Rendering</h3>
-                            <p>In the old template, questions were not designed to be space efficient in mobile, and it would sometimes take minutes to scroll through response options to the bottom of the page. Using mostly javascript, we created an accordian rendering so that question prompts could be grouped together until they are clicked on, at which point they will expand, revealing the response options specific to that question. The first picture is the new template with out any prompts being tapped, and the second picture is what is displayed after tapping on a prompt.</p>
+                            <p>In the old template, questions were not designed to be space efficient for mobile use, and it would sometimes take full minutes to scroll through response options and reach the bottom of the page. Using Javascript, we created an accordian rendering so that question prompts could be grouped together until they are tapped, at which point they would expand, revealing response options. The first picture below is the new template version before any prompts are tapped, and the second picture is the result of tapping on a prompt.</p>
                             <figure style="display:inline-block">
                             <img src="khalilsomani.github.io/img/acordian1_real.PNG" class="img-responsive img-centered" style="width:300px" alt="">
                             </figure>
                             <figure style="display:inline-block">
-                            <img src="khalilsomani.github.io/img/acordian2_real.PNG" class="img-responsive img-centered" style="width:300px" alt="">
+                            <img src="khalilsomani.github.io/img/acordian2_real1.PNG" class="img-responsive img-centered" style="width:300px" alt="">
                             </figure>
                             <h3>Text Elements and Buttons</h3>
-                            <p>In the old survey template, text elements that were created by survey programmers took up a great deal of space, even when they did not contain anything. We fixed that, and in addition created a way for buttons to be vertically displayed in mobile to reduce the need for a horizontal scroll. The first picture is an example from the old template, the second is from the new template illustrating reduced text element space, and the third illustrates new mobile buttons.</p>
+                            <p>In the old survey template, text elements that were created by survey programmers took up a great deal of space, even when they didn't contain anything. We fixed that, and in addition created a way for Next, Save, and Previous buttons to be vertically displayed in mobile to reduce the need for a horizontal scroll. The first picture is an example from the old template, the second is an example from the new template illustrating reduced text element space, and the third illustrates new mobile buttons.</p>
                             <figure style="display:inline-block">
                             <img src="khalilsomani.github.io/img/Screenshot2_new.PNG" class="img-responsive img-centered" style="border:2px solid red" alt="">
                             </figure>
@@ -612,17 +612,17 @@
                             <img src="khalilsomani.github.io/img/buttons_real.PNG" class="img-responsive img-centered" style="width:300px" alt="">
                             </figure>
                             <h3>Mobile Question Tables</h3>
-                            <p>Question tables are a way to organize survey questions in a way that includes multiple prompts and sets of response options. In the old template, the rendering of these tables for mobile had very strange text hierarchies where inner prompts were larger than headings. We changed this to be a more user-friednly hierarchy. Here is a picture of the new, clearer structure we came up with.</p>
+                            <p>Question tables are a way to organize survey questions in a way that include multiple prompts and response option sets. In the old template, the rendering of these tables for mobile had very strange text hierarchies where inner prompts were larger than headings. We changed this to be a more user-friendly hierarchy. Here is a picture of the new, cleaner structure we came up with.</p>
                             <figure style="display:inline-block">
                             <img src="khalilsomani.github.io/img/prompt_real.PNG" class="img-responsive img-centered" style="width:300px" alt="">
                             </figure>
                             <h3>Likert Scale Questions</h3>
-                            <p>On the Solutions Consulting Team, one of my main jobs was to come up with custom solutions for clients. After a client asked for a likert question scale, we realized that the old survey template did not accomodate likert scales, so we built it in ourselves. Here is a picture of the new question functionality.</p>
+                            <p>On the Solutions Consulting Team, one of my main jobs was to come up with custom solutions for clients. After a client asked for a likert question scale, we realized that the old survey template did not accomodate likert scales, so we built it into the new template. Here is a picture of this new question functionality.</p>
                             <figure style="display:inline-block">
                             <img src="khalilsomani.github.io/img/Screenshot4.PNG" class="img-responsive img-centered" style="border:2px solid red" alt="">
                             </figure>
                             <h3>Commentaries</h3>
-                            <p>Another question type is commentaries, which allows for long text entries. In the old version there was very little space alotted for this, so we enlarged the boxes in the new template. The first picture is an example from the old template, the second is from the new template.</p>
+                            <p>Another question type is commentaries, which allow for long text entries. In the old version, there was very little space alotted for this, so we enlarged the boxes in the new template. The first picture below is an example from the old template, the second picture is from the new template.</p>
                             <figure style="display:inline-block">
                             <img src="khalilsomani.github.io/img/Screenshot5_new.PNG" class="img-responsive img-centered" style="border:2px solid red" alt="">
                             </figure>
@@ -630,7 +630,7 @@
                             <img src="khalilsomani.github.io/img/Screenshot5.PNG" class="img-responsive img-centered" style="border:2px solid red" alt="">
                             </figure>
                             <h3>End Page Content</h3>
-                            <p>Lastly, every survey has an end page that lets the participate know they are done. The previous version said thank you but had no more information. In our version, we instead used this space to provide a link so that the survey can be edited and added to by the user at a later time, and included a space for the user to enter their email so that the linked can be convieniently emailed straight to them. The first picture is an example of the old end page content and the second picture is the content from our new template.</p>
+                            <p>Lastly, every survey has an end page that lets the participant know they are done with the survey. The previous version said, "Thank you!", but gave no more information. In our version, we used this space to provide a link so that the survey could be edited and added to by the user at a later time, including a place for the user to enter their email so that the link could be emailed straight to them. The first picture below is an example of the old end page content, and the second picture is an example from our new template.</p>
                             <figure style="display:inline-block">
                             <img src="khalilsomani.github.io/img/Screenshot7_new.PNG" class="img-responsive img-centered" style="border:2px solid red" alt="">
                             </figure>
