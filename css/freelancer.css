@@ -10,8 +10,8 @@ body {
 
 @media screen and (max-width: 500px) {
     p {
-        font-size: 14px;
-        text-align: left!important;
+        font-size: 12px;
+        text-align: justify;
     }
 }
 @media screen and (min-width: 500px) {
