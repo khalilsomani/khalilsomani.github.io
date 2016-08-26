@@ -10,7 +10,7 @@ body {
 
 @media screen and (max-width: 500px) {
     p {
-        font-size: 12px;
+        font-size: 12px!important;
         text-align: justify;
     }
 }
