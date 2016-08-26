@@ -181,9 +181,17 @@ section {
     padding: 100px 0;
 }
 
-section h2 {
-    margin: 0;
-    font-size: 3em;
+@media screen and (max-width: 500px) {
+    section h2 {
+        margin: 0;
+        font-size: 1em!important;
+}
+ 
+@media screen and (min-width: 500px) {    
+    section h2 {
+        margin: 0;
+        font-size: 3em;
+    }
 }
 
 section.success {
@@ -406,7 +414,7 @@ footer .footer-below {
 @media screen and (max-width: 500px) {
     .portfolio-modal .modal-content h2 {
         margin: 0;
-        font-size: 1.5em!important;
+        font-size: 1em!important;
     }
 }
 
