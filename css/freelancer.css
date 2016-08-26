@@ -10,7 +10,7 @@ body {
 
 @media screen and (max-width: 500px) {
     p {
-        font-size: 12px!important;
+        font-size: 14px!important;
         text-align: justify;
     }
 }
@@ -181,18 +181,11 @@ section {
     padding: 100px 0;
 }
 
-@media screen and (max-width: 500px) {
-    section h2 {
-        margin: 0;
-        font-size: 1em!important;
+section h2 {
+    margin: 0;
+    font-size: 3em;
 }
- 
-@media screen and (min-width: 500px) {    
-    section h2 {
-        margin: 0;
-        font-size: 3em;
-    }
-}
+
 
 section.success {
     color: #fff;
@@ -411,18 +404,9 @@ footer .footer-below {
     box-shadow: none;
 }
 
-@media screen and (max-width: 500px) {
-    .portfolio-modal .modal-content h2 {
-        margin: 0;
-        font-size: 1em!important;
-    }
-}
-
-@media screen and (min-width: 500px) {
-    .portfolio-modal .modal-content h2 {
-        margin: 0;
-        font-size: 3em;
-    }
+.portfolio-modal .modal-content h2 {
+    margin: 0;
+    font-size: 3em;
 }
 
 .portfolio-modal .modal-content img {
