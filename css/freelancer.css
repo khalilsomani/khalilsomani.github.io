@@ -410,12 +410,12 @@ footer .footer-below {
         font-size: 2.15em!important;
     }
     
-    .datstat {
+    span.datstat {
         height: 100px!important;
         width: 400px!important;
     }
     
-    .travelers {
+    span.travelers {
         width: 400px!important;
     }
     
