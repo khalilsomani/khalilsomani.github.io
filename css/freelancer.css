@@ -412,8 +412,8 @@ footer .footer-below {
 
     .portfolio-modal .modal-content img {
         margin-bottom: 30px;
-        height: 150px!important;
-        width: 500px!important;
+        height: 300px!important;
+        width: 500pximportant;
     }
 }
 @media screen and (min-width: 500px) {
