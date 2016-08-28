@@ -407,9 +407,18 @@ footer .footer-below {
 @media screen and (max-width: 500px) {
     .portfolio-modal .modal-content h2 {
         margin: 0;
-        font-size: 2.1em!important;
+        font-size: 2.15em!important;
     }
-
+    
+    .datstat {
+        height: 100px!important;
+        width: 400px!important;
+    }
+    
+    .travelers {
+        width: 400px!important;
+    }
+    
     .portfolio-modal .modal-content img {
         margin-bottom: 30px;
         height: 250px!important;
