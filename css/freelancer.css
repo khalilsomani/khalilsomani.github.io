@@ -433,6 +433,8 @@ footer .footer-below {
 
     .portfolio-modal .modal-content img {
         margin-bottom: 30px;
+        height: 400px;
+        width: 710px;
     }
 }
 
