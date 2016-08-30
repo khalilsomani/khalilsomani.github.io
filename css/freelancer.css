@@ -431,6 +431,10 @@ footer .footer-below {
         font-size: 3em;
     }
 
+    span.travelers {
+        height: 400px;
+        width: 710px;
+    }
     .portfolio-modal .modal-content img {
         margin-bottom: 30px;
     }
