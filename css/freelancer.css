@@ -404,11 +404,11 @@ footer .footer-below {
     box-shadow: none;
 }
 
-/*iframe {
+.travelers iframe {
     height: 480px;
     width: 760px;
 }
-*/ 
+
 @media screen and (max-width: 500px) {
     .portfolio-modal .modal-content h2 {
         margin: 0;
