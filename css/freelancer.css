@@ -422,7 +422,7 @@ span.travelers {
     
     span.datstat {
         height: 50px!important;
-        width: 400px!important;
+        width: 320px!important;
     }
     
     span.travelers {
@@ -440,21 +440,21 @@ span.travelers {
         width: 500px!important;
     }
 }
-/*@media screen and (min-width: 500px) {
+@media screen and (min-width: 500px) {
     .portfolio-modal .modal-content h2 {
         margin: 0;
         font-size: 3em;
     }
 
     span.travelers {
-        height: 400px!important;
-        width: 710px!important;
+        height: 480px!important;
+        width: 760px!important;
     }
     .portfolio-modal .modal-content img {
         margin-bottom: 30px;
     }
 }
-*/ 
+
 
 
 
