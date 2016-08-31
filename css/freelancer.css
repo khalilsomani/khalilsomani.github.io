@@ -408,28 +408,19 @@ footer .footer-below {
     height: 480px;
     width: 760px;
 }
-
-span.travelers {
-    height: 480px;
-    width: 710px;
-}
-
-span.datstat {
-    height: 50px!important;
-    width: 320px!important;
-}    
+  
 @media screen and (max-width: 500px) {
     .portfolio-modal .modal-content h2 {
         margin: 0;
         font-size: 2.15em!important;
     }
     
-    span.datstat {
+    .datstat {
         height: 50px!important;
         width: 320px!important;
     }
     
-    span.travelers {
+    .travelers {
         width: 320px!important;
         height: 200px!important;
     }
@@ -452,7 +443,7 @@ span.datstat {
     }
 
     span.travelers {
-        height: 480px;
+        height: 450px;
         width: 710px;
     }
     .portfolio-modal .modal-content img {
