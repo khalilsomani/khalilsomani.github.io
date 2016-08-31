@@ -409,6 +409,11 @@ footer .footer-below {
     width: 760px;
 }
 
+span.travelers {
+    height: 480px;
+    width: 760px;
+}
+    
 @media screen and (max-width: 500px) {
     .portfolio-modal .modal-content h2 {
         margin: 0;
@@ -416,12 +421,12 @@ footer .footer-below {
     }
     
     span.datstat {
-        height: 100px!important;
+        height: 50px!important;
         width: 400px!important;
     }
     
     span.travelers {
-        width: 400px!important;
+        width: 320px!important;
     }
     
     .travelers iframe {
@@ -435,7 +440,7 @@ footer .footer-below {
         width: 500px!important;
     }
 }
-@media screen and (min-width: 500px) {
+/*@media screen and (min-width: 500px) {
     .portfolio-modal .modal-content h2 {
         margin: 0;
         font-size: 3em;
@@ -449,7 +454,7 @@ footer .footer-below {
         margin-bottom: 30px;
     }
 }
-
+*/ 
 
 
 
