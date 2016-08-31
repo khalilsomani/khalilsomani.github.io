@@ -411,9 +411,13 @@ footer .footer-below {
 
 span.travelers {
     height: 480px;
-    width: 760px;
+    width: 710px;
 }
-    
+
+span.datstat {
+    height: 50px!important;
+    width: 320px!important;
+}    
 @media screen and (max-width: 500px) {
     .portfolio-modal .modal-content h2 {
         margin: 0;
@@ -427,6 +431,7 @@ span.travelers {
     
     span.travelers {
         width: 320px!important;
+        height: 200px!important;
     }
     
     .travelers iframe {
@@ -447,8 +452,8 @@ span.travelers {
     }
 
     span.travelers {
-        height: 480px!important;
-        width: 760px!important;
+        height: 480px;
+        width: 710px;
     }
     .portfolio-modal .modal-content img {
         margin-bottom: 30px;
