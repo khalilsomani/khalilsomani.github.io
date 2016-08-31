@@ -404,6 +404,11 @@ footer .footer-below {
     box-shadow: none;
 }
 
+iframe {
+    height: 480px;
+    width: 760px;
+}
+
 @media screen and (max-width: 500px) {
     .portfolio-modal .modal-content h2 {
         margin: 0;
@@ -417,6 +422,11 @@ footer .footer-below {
     
     span.travelers {
         width: 400px!important;
+    }
+    
+    .travelers iframe {
+        width: 320px;
+        height: 180px;
     }
     
     .portfolio-modal .modal-content img {
