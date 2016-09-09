@@ -432,11 +432,11 @@ footer .footer-below {
         height: 180px;
     }
     
- /*   .portfolio-modal .modal-content img {
+   .portfolio-modal .modal-content img {
         margin-bottom: 30px;
         height: 250px!important;
         width: 500px!important;
-    } */ 
+    } 
 }
 @media screen and (min-width: 500px) {
     .portfolio-modal .modal-content h2 {
