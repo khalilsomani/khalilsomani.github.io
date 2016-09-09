@@ -4,13 +4,6 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-@media screen and (max-width: 500px) {
-    .datstat {
-        height: 20px!important;
-        width: 320px!important;
-    }
-}
-
 body {
     overflow-x: hidden;
 }
