@@ -413,6 +413,12 @@ footer .footer-below {
 
 
 @media screen and (max-width: 500px) {
+    #travelers {
+        width: 320px;
+        height: 180px;
+        
+    }
+   
     .datstat {
         height: 20px!important;
         width: 320px!important;
