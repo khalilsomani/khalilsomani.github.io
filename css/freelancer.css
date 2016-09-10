@@ -4,6 +4,12 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+@media screen and (max-width: 500px) {
+   .travelers {
+        width: 50px!important;
+        height: 200px!important;
+    } 
+}
 body {
     overflow-x: hidden;
 }
