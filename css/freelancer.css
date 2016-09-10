@@ -452,8 +452,8 @@ footer .footer-below {
     }
 
     span.travelers {
-        height: 450px;
-        width: 710px;
+        height: 450px!;
+        width: 710px!;
     }
     .portfolio-modal .modal-content img {
         margin-bottom: 30px;
