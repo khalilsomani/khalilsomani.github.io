@@ -412,7 +412,7 @@ footer .footer-below {
   
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     #travelers {
         width: 320px;
         height: 180px;
@@ -445,7 +445,7 @@ footer .footer-below {
         width: 500px!;
     } */
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
     .portfolio-modal .modal-content h2 {
         margin: 0;
         font-size: 3em;
