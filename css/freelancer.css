@@ -446,6 +446,17 @@ footer .footer-below {
     } */
 }
 @media screen and (min-width: 500px) {
+    
+ 
+.grow img:hover {
+  width: 1000px;
+  height: 650px;
+}
+    
+    
+    
+    
+    
     .portfolio-modal .modal-content h2 {
         margin: 0;
         font-size: 3em;
