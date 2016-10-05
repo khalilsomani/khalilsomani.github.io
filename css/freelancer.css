@@ -19,6 +19,8 @@ body {
     p {
         font-size: 20px;
         text-align: justify;
+        padding-left: 60px;
+        width: 650px;
     }
 }
 p.small {
